@@ -2,44 +2,103 @@
 
 </script>
 <template>
-    <div
-        class="flex flex-col space-y-4 justify-center items-center sm:space-y-0 sm:items-stretch sm:justify-evenly sm:flex-row">
-        <div id="card-1" class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title">
-                    Plant Database
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <a role="button" class="btn gap-2" href="https://plant.kaguyasama.moe" target="_blank">
-                        <font-awesome-icon icon="arrow-up-right-from-square" />
-                    </a>
+    <div class="flex gap-y-10 flex-col max-w-screen-2xl min-w-[80%] my-5 mx-auto font-serif xl:m-auto">
+        <div class="flex flex-col gap-y-5">
+            <div class="font-semibold text-4xl">
+                <h2>Existing Projects</h2>
+            </div>
+            <div
+                class="flex flex-col space-y-4 justify-center items-center space-x-0 xl:space-y-0 xl:items-stretch xl:justify-start xl:flex-row xl:space-x-4">
+                <div id="card-0" class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title justify-between">
+                            Plant Database
+                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://plant.kaguyasama.moe" target="_blank">
+                                <font-awesome-icon icon="arrow-up-right-from-square" />
+                            </a>
+                        </h2>
+                        <p>A group project of CRUD, just a demo</p>
+                        <div class="card-actions justify-end">
+                            <div data-theme="mytheme" class="badge badge-accent">JavaScript</div>
+                            <div data-theme="mytheme" class="badge badge-neutral">PHP</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-1" class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title justify-between">
+                            NO Track b23.tv
+                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://blink.kaguyasama.moe" target="_blank">
+                                <font-awesome-icon icon="arrow-up-right-from-square" />
+                            </a>
+                        </h2>
+                        <p>Change your Bilibili short link to the normal one, and remove track details.</p>
+                        <div class="card-actions justify-end">
+                            <div data-theme="mytheme" class="badge badge-accent">JavaScript</div>
+                            <div data-theme="mytheme" class="badge badge-neutral">PHP</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-2" class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title justify-between">
+                            mirai-mamori/Sakurairo
+                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://github.com/mirai-mamori/Sakurairo"
+                                target="_blank">
+                                <font-awesome-icon icon="arrow-up-right-from-square" />
+                            </a>
+                        </h2>
+                        <p>An open source blog theme of Fuukei.</p>
+                        <p> Demo: <a class="link link-primary" href="https://blog.picoaoi.com" target="_blank">独角兽粉末</a></p>
+                        <div class="card-actions justify-end">
+                            <div data-theme="mytheme" class="badge badge-accent">JavaScript</div>
+                            <div data-theme="mytheme" class="badge badge-secondary">TypeScript</div>
+                            <div data-theme="mytheme" class="badge badge-neutral">PHP</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="card-2" class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title">
-                    test2
+        <div class="flex flex-col gap-y-5">
+            <div class="font-semibold text-4xl">
+                <h2>
+                    Under Development
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <a role="button" class="btn gap-2" href="https://blink.kaguyasama.moe" target="_blank">
-                        <font-awesome-icon icon="arrow-up-right-from-square" />
-                    </a>
-                </div>
             </div>
-        </div>
-        <div id="card-3" class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title">
-                    For more?
-                </h2>
-                <p>To my GitHub</p>
-                <div class="card-actions justify-end">
-                    <a role="button" class="btn gap-2" href="https://www.github.com/robert1chi" target="_blank">
-                        <font-awesome-icon icon="arrow-up-right-from-square" />
-                    </a>
+            <div
+                class="flex flex-col space-y-4 justify-center items-center space-x-0 xl:space-y-0 xl:items-stretch xl:justify-start xl:flex-row xl:space-x-4">
+                <div id="card-3" class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title justify-between">
+                            Docker Packer
+                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://github.com/robert1chi/dockerpacker-web"
+                                target="_blank">
+                                <font-awesome-icon icon="arrow-up-right-from-square" />
+                            </a>
+                        </h2>
+                        <p>Help to deploy your Node.js project with docker</p>
+                        <div class="card-actions justify-end">
+                            <div data-theme="mytheme" class="badge badge-secondary">TypeScript</div>
+                            <div data-theme="mytheme" class="badge badge-primary">Golang</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-3" class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title justify-between">
+                            SeqHunter-Node
+                        </h2>
+                        <p>A bioinformatics program. The prototype is based on <a class="font-extrabold">SeqHunter</a> which
+                            is developed by my
+                            undergraduate mentor <a class="link link-primary"
+                                href="https://plant-en.njau.edu.cn/info/1010/1056.htm" target="_blank">Wenwu
+                                Ye</a>.</p>
+                        <p class="text-xs">References: 叶文武, 王源超,and 窦道龙."SeqHunter:序列搜索与分析的生物信息学软件包." 生物信息学
+                            8.04(2010):364-367+377.</p>
+                        <div class="card-actions justify-end">
+                            <div data-theme="mytheme" class="badge badge-secondary">TypeScript</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
