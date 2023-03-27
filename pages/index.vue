@@ -1,5 +1,10 @@
 <script setup>
-
+useHead({
+    title: 'Picoaoi Works',
+    meta: [
+        { name: 'description', content: 'Picoaoi works site.' }
+    ]
+})
 </script>
 <template>
     <div class="flex gap-y-10 flex-col max-w-screen-2xl min-w-[80%] my-5 mx-auto font-serif xl:m-auto">
@@ -13,7 +18,8 @@
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             Plant Database
-                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://plant.kaguyasama.moe" target="_blank">
+                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://plant.kaguyasama.moe"
+                                target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
@@ -28,7 +34,8 @@
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             NO Track b23.tv
-                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://blink.kaguyasama.moe" target="_blank">
+                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://blink.kaguyasama.moe"
+                                target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
@@ -43,8 +50,8 @@
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             mirai-mamori/Sakurairo
-                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://github.com/mirai-mamori/Sakurairo"
-                                target="_blank">
+                            <a role="button" class="btn btn-sm btn-outline gap-2"
+                                href="https://github.com/mirai-mamori/Sakurairo" target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
@@ -71,8 +78,8 @@
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             Docker Packer
-                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://github.com/robert1chi/dockerpacker-web"
-                                target="_blank">
+                            <a role="button" class="btn btn-sm btn-outline gap-2"
+                                href="https://github.com/robert1chi/dockerpacker-web" target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
