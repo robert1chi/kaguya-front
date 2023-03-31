@@ -1,7 +1,61 @@
+<script lang="ts" setup>
+const display = ref<boolean>(false)
+const dropdown = ref<HTMLInputElement | null>(null)
+const dropButton = ref<HTMLInputElement | null>(null)
+const notFocus = () => {
+    dropButton.value?.focus()
+}
+const onFocus = () => {
+    display.value = true
+}
+const buttonClick = () => {
+    display.value = !display.value
+    display.value ? dropButton.value?.focus() : dropButton.value?.blur()
+}
+const buttonBlur = () => {
+    display.value = false
+}
+watch(display, (count, oldCount) => {
+    count ? dropdown.value?.focus() : dropdown.value?.blur()
+    count ? dropButton.value?.focus() : dropButton.value?.blur()
+})
+</script>
 <template>
     <div class="flex flex-col min-h-screen justify-between bg-base-200">
         <div class="navbar bg-base-100">
-            <a class="btn btn-ghost normal-case text-xl">Picoaoi Works</a>
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">Picoaoi Works</a>
+            </div>
+            <div data-theme="winter" class="flex-none dropdown dropdown-end">
+                <button tabIndex="0" class="btn btn-ghost swap swap-rotate" ref="dropButton" @blur="buttonBlur"
+                    @click="buttonClick">
+
+                    <!-- this hidden checkbox controls the state -->
+                    <input type="checkbox" v-bind:checked="display" />
+
+                    <!-- hamburger icon -->
+                    <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 512 512">
+                        <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                    </svg>
+
+                    <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 330 330">
+                        <path xmlns="http://www.w3.org/2000/svg" id="XMLID_225_"
+                            d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+                    </svg>
+
+                </button>
+                <ul tabIndex="0" class="dropdown-content menu shadow bg-base-100 rounded-box w-52" ref="dropdown"
+                    @blur="notFocus" @focus="onFocus">
+                    <li class="hover-bordered"><a href="https://picoaoi.com"
+                            target="_blank"><font-awesome-icon icon="fa-house" />Home Page</a></li>
+                    <li class="hover-bordered"><a href="https://blog.picoaoi.com"
+                            target="_blank"><font-awesome-icon icon="fa-pen-to-square" />Blog</a></li>
+                    <li class="hover-bordered"><a href="https://github.com/robert1chi"
+                            target="_blank"><font-awesome-icon icon="fa-brands fa-github" />GitHub</a></li>
+                </ul>
+            </div>
         </div>
         <slot />
         <footer class="footer items-center p-4 bg-neutral text-neutral-content">
@@ -22,7 +76,4 @@
                 </a>
             </div>
         </footer>
-    </div>
-</template>
-<script setup>
-</script>
+    </div></template>

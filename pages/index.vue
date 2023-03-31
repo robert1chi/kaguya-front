@@ -1,10 +1,13 @@
-<script setup>
+<script lang="ts" setup>
 useHead({
     title: 'Picoaoi Works',
     meta: [
         { name: 'description', content: 'Picoaoi works site.' }
     ]
 })
+
+const stars = ref<Number>(0)
+fetch('https://api.github.com/repos/mirai-mamori/Sakurairo').then((res) => res.json()).then((data) => stars.value = data.stargazers_count)
 </script>
 <template>
     <div class="flex gap-y-10 flex-col max-w-screen-2xl min-w-[80%] my-5 mx-auto font-serif xl:m-auto">
@@ -18,8 +21,7 @@ useHead({
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             Plant Database
-                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://plant.kaguyasama.moe"
-                                target="_blank">
+                            <a role="button" class="btn btn-sm gap-2" href="https://plant.kaguyasama.moe" target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
@@ -34,8 +36,7 @@ useHead({
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             NO Track b23.tv
-                            <a role="button" class="btn btn-sm btn-outline gap-2" href="https://blink.kaguyasama.moe"
-                                target="_blank">
+                            <a role="button" class="btn btn-sm gap-2" href="https://blink.kaguyasama.moe" target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
@@ -49,14 +50,25 @@ useHead({
                 <div id="card-2" class="card w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title justify-between">
-                            mirai-mamori/Sakurairo
-                            <a role="button" class="btn btn-sm btn-outline gap-2"
-                                href="https://github.com/mirai-mamori/Sakurairo" target="_blank">
-                                <font-awesome-icon icon="arrow-up-right-from-square" />
-                            </a>
+                            Sakurairo
+                            <div class="gap-2">
+                                <div class="btn-group">
+                                    <a role="button" class="btn btn-sm gap-2"
+                                        href="https://github.com/mirai-mamori/Sakurairo" target="_blank">
+                                        <font-awesome-icon icon="fa-brands fa-github" />
+                                        <div class="badge badge-accent gap-2 font-sans">
+                                            <font-awesome-icon icon="fa-star" />{{ stars.toLocaleString() }}
+                                        </div>
+                                    </a>
+                                    <a role="button" class="btn btn-sm gap-2" href="https://docs.fuukei.org/"
+                                        target="_blank">
+                                        <font-awesome-icon icon="arrow-up-right-from-square" />
+                                    </a>
+                                </div>
+                            </div>
                         </h2>
-                        <p>An open source blog theme of Fuukei.</p>
-                        <p> Demo: <a class="link link-primary" href="https://blog.picoaoi.com" target="_blank">独角兽粉末</a></p>
+                        <p>mirai-mamori/Sakurairo is a blog theme maintained by the Fuukei project team.</p>
+                        <p>Demo: <a class="link link-primary" href="https://blog.picoaoi.com" target="_blank">独角兽粉末</a></p>
                         <div class="card-actions justify-end">
                             <div data-theme="mytheme" class="badge badge-accent">JavaScript</div>
                             <div data-theme="mytheme" class="badge badge-secondary">TypeScript</div>
@@ -78,8 +90,8 @@ useHead({
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             Docker Packer
-                            <a role="button" class="btn btn-sm btn-outline gap-2"
-                                href="https://github.com/robert1chi/dockerpacker-web" target="_blank">
+                            <a role="button" class="btn btn-sm gap-2" href="https://github.com/robert1chi/dockerpacker-web"
+                                target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
@@ -90,7 +102,7 @@ useHead({
                         </div>
                     </div>
                 </div>
-                <div id="card-3" class="card w-96 bg-base-100 shadow-xl">
+                <div id="card-4" class="card w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             SeqHunter-Node
