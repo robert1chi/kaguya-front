@@ -2,6 +2,7 @@
 const display = ref<boolean>(false)
 const dropdown = ref<HTMLInputElement | null>(null)
 const dropButton = ref<HTMLInputElement | null>(null)
+const night = ref<string>('winter')
 const notFocus = () => {
     dropButton.value?.focus()
 }
@@ -19,6 +20,9 @@ watch(display, (count, oldCount) => {
     count ? dropdown.value?.focus() : dropdown.value?.blur()
     count ? dropButton.value?.focus() : dropButton.value?.blur()
 })
+onMounted(() => {
+    night.value = window.matchMedia('(prefers-color-scheme: light)').matches ? 'winter' : 'dark'
+})
 </script>
 <template>
     <div class="flex flex-col min-h-screen justify-between bg-base-200">
@@ -26,7 +30,7 @@ watch(display, (count, oldCount) => {
             <div class="flex-1">
                 <a class="btn btn-ghost normal-case text-xl">Picoaoi Works</a>
             </div>
-            <div data-theme="winter" class="flex-none dropdown dropdown-end">
+            <div :data-theme="night" class="flex-none dropdown dropdown-end">
                 <button tabIndex="0" class="btn btn-ghost swap swap-rotate" ref="dropButton" @blur="buttonBlur"
                     @click="buttonClick">
 
@@ -48,12 +52,12 @@ watch(display, (count, oldCount) => {
                 </button>
                 <ul tabIndex="0" class="dropdown-content menu shadow bg-base-100 rounded-box w-52" ref="dropdown"
                     @blur="notFocus" @focus="onFocus">
-                    <li class="hover-bordered"><a href="https://picoaoi.com"
-                            target="_blank"><font-awesome-icon icon="fa-house" />Home Page</a></li>
-                    <li class="hover-bordered"><a href="https://blog.picoaoi.com"
-                            target="_blank"><font-awesome-icon icon="fa-pen-to-square" />Blog</a></li>
-                    <li class="hover-bordered"><a href="https://github.com/robert1chi"
-                            target="_blank"><font-awesome-icon icon="fa-brands fa-github" />GitHub</a></li>
+                    <li class="hover-bordered"><a href="https://picoaoi.com" target="_blank"><font-awesome-icon
+                                icon="fa-house" />Home Page</a></li>
+                    <li class="hover-bordered"><a href="https://blog.picoaoi.com" target="_blank"><font-awesome-icon
+                                icon="fa-pen-to-square" />Blog</a></li>
+                    <li class="hover-bordered"><a href="https://github.com/robert1chi" target="_blank"><font-awesome-icon
+                                icon="fa-brands fa-github" />GitHub</a></li>
                 </ul>
             </div>
         </div>
@@ -76,4 +80,5 @@ watch(display, (count, oldCount) => {
                 </a>
             </div>
         </footer>
-    </div></template>
+    </div>
+</template>
