@@ -11,8 +11,8 @@ fetch('https://api.github.com/repos/mirai-mamori/Sakurairo').then((res) => res.j
 </script>
 <template>
     <div class="flex gap-y-10 flex-col max-w-screen-2xl min-w-[80%] my-5 mx-auto font-serif xl:m-auto">
-        <div class="flex flex-col gap-y-5">
-            <div class="font-semibold text-4xl">
+        <div class="flex flex-col gap-y-5 items-center xl:items-start">
+            <div class="font-semibold text-4xl w-96">
                 <h2>Existing Projects</h2>
             </div>
             <div
@@ -36,7 +36,7 @@ fetch('https://api.github.com/repos/mirai-mamori/Sakurairo').then((res) => res.j
                     <div class="card-body">
                         <h2 class="card-title justify-between">
                             NO Track b23.tv
-                            <a role="button" class="btn btn-sm gap-2" href="https://blink.kaguyasama.moe" target="_blank">
+                            <a role="button" class="btn btn-sm gap-2" href="https://github.com/robert1chi/bili-shortlink" target="_blank">
                                 <font-awesome-icon icon="arrow-up-right-from-square" />
                             </a>
                         </h2>
@@ -78,8 +78,8 @@ fetch('https://api.github.com/repos/mirai-mamori/Sakurairo').then((res) => res.j
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-y-5">
-            <div class="font-semibold text-4xl">
+        <div class="flex flex-col gap-y-5 items-center xl:items-start">
+            <div class="font-semibold text-4xl w-96">
                 <h2>
                     Under Development
                 </h2>
