@@ -68,7 +68,7 @@ fetch('https://api.github.com/repos/mirai-mamori/Sakurairo').then((res) => res.j
                             </div>
                         </h2>
                         <p>mirai-mamori/Sakurairo is a blog theme maintained by the Fuukei project team.</p>
-                        <p>Demo: <a class="link link-primary" href="https://blog.picoaoi.com" target="_blank">独角兽粉末</a></p>
+                        <p>Demo: <a class="link link-primary" href="https://docs.fuukei.org/demo/" target="_blank">使用本主题的博客</a></p>
                         <div class="card-actions justify-end">
                             <div data-theme="mytheme" class="badge badge-accent">JavaScript</div>
                             <div data-theme="mytheme" class="badge badge-secondary">TypeScript</div>
