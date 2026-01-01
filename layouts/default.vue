@@ -52,10 +52,8 @@ onMounted(() => {
                 </button>
                 <ul tabIndex="0" class="dropdown-content menu shadow bg-base-100 rounded-box w-52" ref="dropdown"
                     @blur="notFocus" @focus="onFocus">
-                    <li class="hover-bordered"><a href="https://picoaoi.com" target="_blank"><font-awesome-icon
+                    <li class="hover-bordered"><a href="https://kaguyasama.moe" target="_blank"><font-awesome-icon
                                 icon="fa-house" />Home Page</a></li>
-                    <li class="hover-bordered"><a href="https://blog.picoaoi.com" target="_blank"><font-awesome-icon
-                                icon="fa-pen-to-square" />Blog</a></li>
                     <li class="hover-bordered"><a href="https://github.com/robert1chi" target="_blank"><font-awesome-icon
                                 icon="fa-brands fa-github" />GitHub</a></li>
                 </ul>
